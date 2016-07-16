@@ -1,2 +1,2 @@
 # bootstrap-modal-confirm
-The confirm modal made with Bootstrap &amp;&amp; jQuery
+The confirm modal made with Bootstrap and jQuery

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>bootstrap-modal-confirm example</title>
+
+	<!-- start: CSS -->
+	<link href="http://apps.bdimg.com/libs/bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<!-- end: CSS -->
+
+	<!-- start: jQuery -->
+	<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+	<!-- end: jQuery -->
+
+	<style type="text/css">
+		.example {position:relative; top:50px; text-align:center;}
+	</style>
+</head>
+
+<body>
+	<div class="example">
+		<h1>get a confirm dialog box</h1>
+		<button type="button" class="btn btn-large btn-primary">Click me</button>
+	</div>
+	<!-- Modal start -->
+	<div id="modalId" class="modal hide fade" tabindex="-1" role="dialog" data-backdrop="static" aria-hidden="true">
+		<div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>{title}</h3>
+		</div>
+		<div class="modal-body">
+		    <p>{content}</p>
+		</div>
+		<div class="modal-footer">
+		    <a href="#" class="btn cancel" data-dismiss="modal">{btnCancel}</a>
+		    <a href="#" class="btn btn-primary ok" data-dismiss="modal">{btnOk}</a>
+		</div>
+	</div>
+	<!-- Modal end -->
+	
+	<!-- start: JavaScript-->
+	<script src="http://apps.bdimg.com/libs/bootstrap/2.3.1/js/bootstrap.min.js"></script>
+	<script src="bootstrap-modal-confirm.js"></script>
+	<!-- end: JavaScript-->
+
+	<script type="text/javascript">
+		$('.example > button').click(function(){
+			$.Modal('modalId', {
+				title: "example title",
+				content: "example content here",
+				btnCancel: "No",
+				btnOk: "Yes"
+			})
+			.do(function(){
+				alert('You cilcked Yes');
+			}, function(){
+				alert('You cilcked No');
+			});	
+		});
+	</script>
+
+</body>
+</html>
