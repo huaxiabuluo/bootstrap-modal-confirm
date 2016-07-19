@@ -4,15 +4,14 @@ The confirm modal made with Bootstrap and jQuery
 
 ### 示例 ###
 
-// 为简化代码，直接使用了HTML中创建的模态框Div元素
-
-$.Modal('modalId', {
-    title: "模态框标题",
-    content: "模态框内容",
-    btnCancel: "取消",
-    btnOk: "确定"
-})
-.do(OKHandler, CancelHandler);	
+    // 为简化代码，直接使用了HTML中创建的模态框Div元素
+    $.Modal('modalId', {
+        title: "模态框标题",
+        content: "模态框内容",
+        btnCancel: "取消",
+        btnOk: "确定"
+    })
+    .do(OKHandler, CancelHandler);	
 
 
 ### To continue ###
