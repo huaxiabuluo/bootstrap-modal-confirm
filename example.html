@@ -22,22 +22,7 @@
 		<h1>get a confirm dialog box</h1>
 		<button type="button" class="btn btn-large btn-primary">Click me</button>
 	</div>
-	<!-- Modal start -->
-	<div id="modalId" class="modal hide fade" tabindex="-1" role="dialog" data-backdrop="static" aria-hidden="true">
-		<div class="modal-header">
-		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		    <h3>{title}</h3>
-		</div>
-		<div class="modal-body">
-		    <p>{content}</p>
-		</div>
-		<div class="modal-footer">
-		    <a href="#" class="btn cancel" data-dismiss="modal">{btnCancel}</a>
-		    <a href="#" class="btn btn-primary ok" data-dismiss="modal">{btnOk}</a>
-		</div>
-	</div>
-	<!-- Modal end -->
-	
+
 	<!-- start: JavaScript-->
 	<script src="http://apps.bdimg.com/libs/bootstrap/2.3.1/js/bootstrap.min.js"></script>
 	<script src="bootstrap-modal-confirm.js"></script>
@@ -45,16 +30,16 @@
 
 	<script type="text/javascript">
 		$('.example > button').click(function(){
-			$.Modal('modalId', {
+			$.Modal({
 				title: "example title",
 				content: "example content here",
 				btnCancel: "No",
 				btnOk: "Yes"
 			})
 			.do(function(){
-				alert('You cilcked Yes');
+				$('.example > h1').text('You clicked Yes');
 			}, function(){
-				alert('You cilcked No');
+				$('.example > h1').text('You clicked No');
 			});	
 		});
 	</script>
